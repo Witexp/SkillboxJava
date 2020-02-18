@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    //Тест coomit
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void onClose(View view){
-        this.finish();
+                this.finish();
     }
 }
