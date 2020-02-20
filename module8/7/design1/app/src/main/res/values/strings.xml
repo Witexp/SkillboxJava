@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="Имя">
+        <item>Андрей</item>
+        <item>Дмитрий</item>
+        <item>Николай</item>
+        <item>Александр</item>
+        <item>Василий</item>
+    </string-array>
+    <string-array name="Группы">
+        <item>Работа</item>
+        <item>Хобби</item>
+        <item>Спорт</item>
+    </string-array>
+</resources>
