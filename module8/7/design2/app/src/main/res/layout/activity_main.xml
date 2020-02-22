@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_margin="20dp">
 
 
     <Spinner
         android:id="@+id/mySpinnerName"
-        android:layout_width="181dp"
+        android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
         android:layout_weight="1"
         android:entries="@array/Имя"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,10 +19,8 @@
 
     <Spinner
         android:id="@+id/mySpinnerGroup"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         android:layout_weight="1"
         android:entries="@array/Группы"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,11 +30,11 @@
         android:id="@+id/myName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="316dp"
         android:text="Имя"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,11 +42,10 @@
         android:id="@+id/myGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:text="Группа"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/myName" />
 
@@ -57,20 +53,19 @@
         android:id="@+id/myMsg"
         android:layout_width="87dp"
         android:layout_height="24dp"
-        android:layout_marginTop="20dp"
-        android:text="Сообщение"
+        android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
+        android:text="Сообщение"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/myGroup"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/myEnterMsg"
         android:layout_width="255dp"
         android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"
         android:layout_weight="3"
         android:hint="Введите сообщение..."
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,8 +75,6 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:onClick="onClickSendMsg"
         android:text="Отправить"
