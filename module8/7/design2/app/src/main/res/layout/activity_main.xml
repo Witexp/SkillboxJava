@@ -11,19 +11,21 @@
     <Spinner
         android:id="@+id/mySpinnerName"
         android:layout_width="0dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:entries="@array/Имя"
+        app:layout_constraintEnd_toStartOf="@id/mySpinnerGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/mySpinnerGroup"
         android:layout_width="0dp"
-        android:layout_height="25dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:entries="@array/Группы"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mySpinnerName"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -64,11 +66,12 @@
 
     <EditText
         android:id="@+id/myEnterMsg"
-        android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="3"
         android:hint="Введите сообщение..."
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
