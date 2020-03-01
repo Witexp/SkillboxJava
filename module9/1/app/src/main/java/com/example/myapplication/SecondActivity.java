@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
     EditText  editText;
@@ -20,8 +21,13 @@ public class SecondActivity extends AppCompatActivity {
         Intent openThreeActivityIntent = new Intent(this, ThreeActivity.class);
         editText = findViewById(R.id.editText);
         String editTextMsg = editText.getText().toString();
-        openThreeActivityIntent.putExtra("twoSecondActivity",editTextMsg);
-        startActivity(openThreeActivityIntent);
+        if (editTextMsg.equals("")) {
+            Toast toast = Toast.makeText (this,"Введите данные в поле",Toast.LENGTH_LONG);
+            toast.show();
+        } else {
+            openThreeActivityIntent.putExtra("twoSecondActivity", editTextMsg);
+            startActivity(openThreeActivityIntent);
+        }
 
     }
 }
