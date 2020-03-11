@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         videoView = findViewById(R.id.videoView);
         String pathToVideoFile = "android.resource://com.example.myvideopleer/" + R.raw.videoplay;
         videoView.setVideoPath(pathToVideoFile);
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState ) {
         super.onSaveInstanceState(outState);
-        intPosition = videoView.getCurrentPosition();
+        //intPosition = videoView.getCurrentPosition();
         outState.putInt("intPosition",intPosition);
     }
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         intPosition = videoView.getCurrentPosition();
+
         videoView.pause();
     }
 /*
